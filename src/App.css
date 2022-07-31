@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+
+/* Clases Proyecto */
+.col-yellow-primary {
+  color: #FFC81F;
+}
+.col-yellow-secundary {
+  color: #FF671B;
+}
+.bg-gray {
+  background-color: #2B2B2B;
+}
+.text-zise {
+  font-size: 2rem;
+}
+.h-boxmain {
+  height: 20.5rem;
+}
+.pt-p {
+  padding-top: 1.8rem;
+}
+.pb-5p5rem {
+  padding-bottom: 5.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 640px) { 
+  .h-boxmain-sm {
+    height: 18.5rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 768px) { 
+  .m-imgdesktop-md {
+    margin: 0 0 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+  .h-boxmain-md {
+    height: 18rem;
   }
+  .pt-p-md {
+    padding-top: 1.8rem;
+  }
+  .wtext-min-md {
+    width: 70%;
+  }
+  .wtext-max-md {
+    width: 92%;
+  }
+}
+@media (min-width: 1024px) { 
+  .wh2-lg {
+    width: auto;
+  }
+  .h-boxmain-lg {
+    height: 23rem;
+  }
+  .size-h2-lg {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1280px) { 
+  .h-boxmain-xl {
+    height: 23rem;
+  }
+  .m-imgdesktop-xl {
+    margin: 0 0 0 auto;
+  }
+  .wtext-max-xl {
+    width: 94%;
+  }
+  .wtext-min-xl {
+    width: 77%;
+  }
+  .size-h2-xl {
+    font-size: 5rem;
+  }
+  .lineheight-h2-xl {
+    line-height: 5rem;
+  }
+  .lineheight-p-xl {
+    line-height: 2.5rem;
+  }
+  .wh2-xl {
+    width: 50rem;
+  }
+  .pl-xl {
+    padding-left: 3.5rem;
+}
 }
