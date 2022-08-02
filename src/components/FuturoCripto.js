@@ -8,22 +8,6 @@ import img3 from '../img/BL-Martercard-Evento-Asset-Desktop.png';
 
 const FuturoCripto = () => {
 
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
-  
-    useEffect(() => {
-      window.addEventListener("resize", handleResize);
-  
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, []);
-  
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-      setHeight(window.innerHeight);
-    };
-
     return ( 
         <div className=' relative border h-boxmain md:relative h-boxmain-sm h-boxmain-md h-boxmain-lg h-boxmain-xl 2xl:h-96'>
             <div className=' absolute w-full bg-gray h-full flex justify-center items-start px-1 xl:pt-0 '>
@@ -35,12 +19,10 @@ const FuturoCripto = () => {
                         <h2 className='text-4xl font-medium leading-8 text-white text-center flex flex-col md:text-left md:text-5xl md:font-medium md:tracking-wide wh2-lg size-h2-lg wh2-xl xl:font-medium size-h2-xl lineheight-h2-xl xl:tracking-wider 2xl:text-8xl 2xl:leading-none' >El futuro de la criptoeconomía <span className='text-lg col-yellow-primary text-center leading-8 pt-1 md:text-left md:text-2xl md:tracking-normal lg:text-3xl xl:pt-3 2xl:text-4xl 2xl:pt-3' >en América Latina y el Caribe</span></h2>
                     </div>
                     <div className=' w-3/4 h-auto pt-12 object-cover sm:pt-4 md:col-start-2 md:col-end-3 md:row-start-1 row-end-1 md:w-full md:object-cover md:h-80 md:pt-0 xl:pt-0'>
-                        {width <= 767
-                        ?
-                        <img className='w-auto h-auto m-auto md:m-auto md:object-cover' loading="lazy" decoding="async" src={img2} lazyalt="imagen" />
-                        :
-                        <img className='w-auto h-auto transform md:m-auto md:object-cover m-imgdesktop-md m-imgdesktop-xl' loading="lazy" decoding="async" src={img3} lazyalt="imagen" />
-                        }                        
+                        <picture>
+                            <img className='w-auto h-auto m-auto md:hidden ' loading="lazy" decoding="async" src={img2} lazyalt="imagen" />
+                            <img className='hidden md:block md:m-auto md:object-cover m-imgdesktop-md m-imgdesktop-xl' loading="lazy" decoding="async" src={img3} lazyalt="imagen" />
+                        </picture>
                     </div>
                 </div>
             </div>

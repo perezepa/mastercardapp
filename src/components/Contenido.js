@@ -2,21 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../App.css";
 
 const Contenido = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
-
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
 
   return (
     <div className="flex flex-col pt-32 pb-5p5rem px-9 text-center text-xl leading-6 sm:pt-32 md:px-9 md:pt-8 md:text-justify md:text-xl md:leading-6 xl:pt-8 pl-xl xl:text-4xl lineheight-p-xl xl:pb-28 ">
